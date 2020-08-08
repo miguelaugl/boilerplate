@@ -1,1 +1,1 @@
-console.log("Teste...");
+"use strict";console.log("Teste..."),setTimeout(function(){console.log("Testando...")});var variableTest="Testando variáveis...";
