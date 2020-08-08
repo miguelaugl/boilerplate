@@ -25,98 +25,105 @@ const filesPath = {
 };
 
 function cleanPath(path) {
-  return src(path, { read: false })
-    .pipe(clean());
-};
+  return src(path, { read: false }).pipe(clean());
+}
 
 function styles() {
   cleanPath(filesPath.buildSass);
 
   return src(filesPath.sass)
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([ cssnano() ]))
+    .pipe(postcss([cssnano()]))
     .pipe(autoprefixer())
     .pipe(concat('styles.css'))
     .pipe(dest('./build/css'))
     .pipe(browserSync.stream());
-};
+}
 
 function scripts() {
   cleanPath(filesPath.buildJs);
 
   return src(filesPath.js)
     .pipe(concat('bundle.js'))
-    .pipe(babel({
-      presets: ['@babel/env'],
-    }))
+    .pipe(
+      babel({
+        presets: ['@babel/env'],
+      }),
+    )
     .pipe(uglify())
     .pipe(dest('./build/js'))
     .pipe(browserSync.stream());
-};
+}
 
 function cacheBuster() {
   const cbString = new Date().getTime();
 
   return src([filesPath.buildHtml])
-    .pipe(replace(/cache_bust=\d+/g, 'cache_bust=' + cbString))
+    .pipe(replace(/cache_bust=\d+/g, `cache_bust=${cbString}`))
     .pipe(dest('./build'));
-};
+}
 
 function includes() {
   cleanPath(filesPath.buildHtml);
   return src([filesPath.html])
-    .pipe(fileInclude({
-      prefix: '@',
-      basepath: './src/pages/components'
-    }))
+    .pipe(
+      fileInclude({
+        prefix: '@',
+        basepath: './src/pages/components',
+      }),
+    )
     .pipe(dest('./build'));
 }
 
 function imageMin() {
   return src(filesPath.images)
-    .pipe(imagemin([
-      //png
-      imagemin.optipng({
-        optimizationLevel: 2
-      }),
-      // gif
-      imagemin.gifsicle({
+    .pipe(
+      imagemin([
+        // png
+        imagemin.optipng({
+          optimizationLevel: 2,
+        }),
+        // gif
+        imagemin.gifsicle({
           interlaced: true,
-          optimizationLevel: 3
-      }),
-      //svg
-      imagemin.svgo({
-          plugins: [{
-              removeViewBox: false
-          }]
-      }),
-      //jpg lossless
-      imagemin.mozjpeg({
-          progressive: true
-      }),
-    ]))
+          optimizationLevel: 3,
+        }),
+        // svg
+        imagemin.svgo({
+          plugins: [
+            {
+              removeViewBox: false,
+            },
+          ],
+        }),
+        // jpg lossless
+        imagemin.mozjpeg({
+          progressive: true,
+        }),
+      ]),
+    )
     .pipe(dest('./build/images'));
 }
 
 function copyImagesToBuild() {
-  return src(filesPath.images)
-    .pipe(dest(filesPath.buildImages));
-};
+  return src(filesPath.images).pipe(dest(filesPath.buildImages));
+}
 
 function watcher() {
   browserSync.init({
     server: {
-      baseDir: './build'
-    }
+      baseDir: './build',
+    },
   });
 
   watch(filesPath.sass, styles);
   watch(filesPath.js, scripts);
-  watch(
-    [filesPath.html, filesPath.components]
-  ).on('change', series(includes, cacheBuster, browserSync.reload));
+  watch([filesPath.html, filesPath.components]).on(
+    'change',
+    series(includes, cacheBuster, browserSync.reload),
+  );
   watch(filesPath.images, copyImagesToBuild);
-};
+}
 
 exports.build = series(
   parallel(styles, scripts, includes, imageMin),
