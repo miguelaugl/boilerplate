@@ -44,7 +44,6 @@ function scripts() {
   cleanPath(filesPath.buildJs);
 
   return src(filesPath.js)
-    .pipe(concat('bundle.js'))
     .pipe(
       babel({
         presets: ['@babel/env'],
