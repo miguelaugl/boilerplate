@@ -17,7 +17,7 @@ const filesPath = {
   js: './src/js/**/*.js',
   html: './src/pages/*.html',
   components: './src/pages/components/*.html',
-  images: './src/images/*.{gif,png,jpg,svg}',
+  images: './src/images/*.{gif,png,jpg,svg,GIF,PNG,JPG,SVG}',
   buildSass: './build/css/*.css',
   buildJs: './build/js/*.js',
   buildHtml: './build/*.html',
