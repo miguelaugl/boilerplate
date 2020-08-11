@@ -125,9 +125,11 @@ function watcher() {
 }
 
 exports.build = series(
-  parallel(styles, scripts, includes, imageMin),
+  parallel(styles, scripts, includes),
   cacheBuster,
 );
+
+exports.imagemin = imageMin;
 
 exports.default = series(
   parallel(styles, scripts, includes, copyImagesToBuild),
