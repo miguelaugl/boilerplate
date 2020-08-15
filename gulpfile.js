@@ -11,6 +11,7 @@ const clean = require('gulp-clean');
 const babel = require('gulp-babel');
 const fileInclude = require('gulp-file-include');
 const imagemin = require('gulp-imagemin');
+const rename = require('gulp-rename');
 
 const filesPath = {
   sass: './src/scss/**/*.scss',
@@ -35,7 +36,7 @@ function styles() {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([cssnano()]))
     .pipe(autoprefixer())
-    .pipe(concat('styles.css'))
+    .pipe(concat('styles.min.css'))
     .pipe(dest('./build/css'))
     .pipe(browserSync.stream());
 }
@@ -50,6 +51,9 @@ function scripts() {
       }),
     )
     .pipe(uglify())
+    .pipe(rename({
+      suffix: '.min',
+    }))
     .pipe(dest('./build/js'))
     .pipe(browserSync.stream());
 }
