@@ -45,11 +45,7 @@ function scripts() {
   cleanPath(filesPath.buildJs);
 
   return src(filesPath.js)
-    .pipe(
-      babel({
-        presets: ['@babel/env'],
-      }),
-    )
+    .pipe(babel())
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min',
