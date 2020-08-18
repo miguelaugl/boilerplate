@@ -24,20 +24,20 @@ Este é um boilerplate criado principalmente para ser utilizado no meu ambiente 
 
 ### Estrutura de pastas
 
-A divisão de pastas desse boilerplate é feita da seguinte maneira:
-  :seedling: |---src - nossa pasta raiz de desenvolvimento, é nela onde estão todas as outras pastas com seus correspondentes conteúdos brutos.
-    :package: |---assets - comporta a pasta de imagens e a pasta de videos utilizadas no projeto.
-      :card_file_box: |---images - armazena as imagens do projeto.
-      :card_file_box: |---videos - armazena os videos do projeto.
-    :mag: |---js - guarda todo nosso conteúdo de javascript.
-    :pushpin: |---pages - onde ficam nossas páginas e a pasta de componentes (arquivos HTML).
-      :pencil: |---components - os componentes de cada página, por exemplo: header.html/footer.html.
-    :lipstick: |---scss - todo o conteúdo relacionado a sass ficam nessa pasta.
+A divisão de pastas desse boilerplate é feita da seguinte maneira: <br />
+  :seedling: |---src - nossa pasta raiz de desenvolvimento, é nela onde estão todas as outras pastas com seus correspondentes conteúdos brutos. <br />
+    :package: |---assets - comporta a pasta de imagens e a pasta de videos utilizadas no projeto.<br />
+      :card_file_box: |---images - armazena as imagens do projeto.<br />
+      :card_file_box: |---videos - armazena os videos do projeto.<br />
+    :mag: |---js - guarda todo nosso conteúdo de javascript.<br />
+    :pushpin: |---pages - onde ficam nossas páginas e a pasta de componentes (arquivos HTML).<br />
+      :pencil: |---components - os componentes de cada página, por exemplo: header.html/footer.html.<br />
+    :lipstick: |---scss - todo o conteúdo relacionado a sass ficam nessa pasta.<br />
 
-Ao realizar o comando yarn build ou alterar o código em modo de desenvolvimento, obterá uma estrutura semelhante a src.
-  :tada: |---build - nossa pasta disponível para subir para a produção, contendo todas as outras pastas necessárias e nossos páginas HTML com seus componentes incluídos.
-    :package: |---assets - sem mudanças.
-      :card_file_box: |--images - pode possuir a mesma estrutura ou as imagens estão minificadas se você usar o comando yarn imagemin após o comando yarn build.
-      :card_file_box: |---video - sem mudanças.
-    :mag: |---js - arquivos javascripts transpilados, minificados, comprimidos e com o sufixo min.
-    :art: |---css - arquivo css, todo o código sass é compilado para css, minificado, autoprefixado, comprimido e adota o sufixo min.
+Ao realizar o comando yarn build ou alterar o código em modo de desenvolvimento, obterá uma estrutura semelhante a src.<br />
+  :tada: |---build - nossa pasta disponível para subir para a produção, contendo todas as outras pastas necessárias e nossos páginas HTML com seus componentes incluídos.<br />
+    :package: |---assets - sem mudanças.<br />
+      :card_file_box: |--images - pode possuir a mesma estrutura ou as imagens estão minificadas se você usar o comando yarn imagemin após o comando yarn build.<br />
+      :card_file_box: |---video - sem mudanças.<br />
+    :mag: |---js - arquivos javascripts transpilados, minificados, comprimidos e com o sufixo min.<br />
+    :art: |---css - arquivo css, todo o código sass é compilado para css, minificado, autoprefixado, comprimido e adota o sufixo min.<br />
