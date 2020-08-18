@@ -18,7 +18,7 @@ const filesPath = {
   js: './src/js/**/*.js',
   html: './src/pages/*.html',
   components: './src/pages/components/*.html',
-  images: './src/images/*.{gif,png,jpg,svg,GIF,PNG,JPG,SVG}',
+  images: './src/assets/images/*.{gif,png,jpg,svg,GIF,PNG,JPG,SVG}',
   buildSass: './build/css/*.css',
   buildJs: './build/js/*.js',
   buildHtml: './build/*.html',
@@ -101,7 +101,7 @@ function imageMin() {
         }),
       ]),
     )
-    .pipe(dest('./build/images'));
+    .pipe(dest('./build/assets/images'));
 }
 
 function copyImagesToBuild() {
