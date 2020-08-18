@@ -1,7 +1,6 @@
-# *Boilerplate*
+# **Boilerplate**
 
-Criador desse belo boilerplate:
-![](/src/images/github-profile.png)
+Este é um boilerplate criado principalmente para ser utilizado no meu ambiente de trabalho, pronto para lidar com novos projetos e projetos já iniciados.
 
 ## Funcionalidades
 - [x] Minificação de arquivos _javascript, CSS e imagens;
@@ -15,6 +14,8 @@ Criador desse belo boilerplate:
 ## Comandos
 yarn - nesse projeto utilizamos o yarn, para que instale as dependências utilizadas rode este comando.
 
-gulp - comando padrão do projeto, ele iniciará o projeto em modo de desenvolvimento na rota 3000 se a mesma não estiver sendo usada. Em modo de desenvolvimento, todas as mudanças nos arquivos serão observadas. Link completo do ambiente: [http://localhost:3000](http://localhost:3000).
+yarn dev - esse comando inicia o projeto em modo de desenvolvimento por padrão na rota 3000 se a mesma não estiver sendo usada. Em modo de desenvolvimento, todas as mudanças nos arquivos serão observadas e compiladas. Link completo do ambiente: [http://localhost:3000](http://localhost:3000).
 
-build - comando que realiza todas as funcionalidades listadas, criando a pasta pronta para enviar para produção.
+yarn build - comando que realiza todas as funcionalidades listadas, criando a pasta pronta para enviar para produção.
+
+yarn imagemin - minifica as imagens da pasta src.

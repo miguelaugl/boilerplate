@@ -2,6 +2,11 @@
   "dependencies": {
     "gulp-cli": "^2.3.0"
   },
+  "scripts": {
+    "dev": "gulp",
+    "imagemin": "gulp imagemin",
+    "build": "gulp build"
+  },
   "name": "gulp-base-project",
   "version": "1.0.0",
   "main": "index.js",
