@@ -25,19 +25,19 @@ Este é um boilerplate criado principalmente para ser utilizado no meu ambiente 
 ### Estrutura de pastas
 
 A divisão de pastas desse boilerplate é feita da seguinte maneira: <br />
-&nbsp;:seedling: |---src - nossa pasta raiz de desenvolvimento, é nela onde estão todas as outras pastas com seus correspondentes conteúdos brutos. <br />
-&nbsp;&nbsp;:package: |---assets - comporta a pasta de imagens e a pasta de videos utilizadas no projeto.<br />
-&nbsp;&nbsp;&nbsp;:card_file_box: |---images - armazena as imagens do projeto.<br />
-&nbsp;&nbsp;&nbsp;:card_file_box: |---videos - armazena os videos do projeto.<br />
-&nbsp;&nbsp;:mag: |---js - guarda todo nosso conteúdo de javascript.<br />
-&nbsp;&nbsp;:pushpin: |---pages - onde ficam nossas páginas e a pasta de componentes (arquivos HTML).<br />
-&nbsp;&nbsp;&nbsp;:pencil: |---components - os componentes de cada página, por exemplo: header.html/footer.html.<br />
-&nbsp;&nbsp;:lipstick: |---scss - todo o conteúdo relacionado a sass ficam nessa pasta.<br />
+  <p style="margin-left: 1rem">:seedling: |---src - nossa pasta raiz de desenvolvimento, é nela onde estão todas as outras pastas com seus correspondentes conteúdos brutos.<p>
+    <p style="margin-left: 2rem">:package: |---assets - comporta a pasta de imagens e a pasta de videos utilizadas no projeto.</p>
+      <p style="margin-left: 3rem">:card_file_box: |---images - armazena as imagens do projeto.</p>
+      <p style="margin-left: 3rem">:card_file_box: |---videos - armazena os videos do projeto.</p>
+    <p style="margin-left: 2rem">:mag: |---js - guarda todo nosso conteúdo de javascript.</p>
+    <p style="margin-left: 2rem">:pushpin: |---pages - onde ficam nossas páginas e a pasta de componentes (arquivos HTML).</p>
+      <p style="margin-left: 3rem">:pencil: |---components - os componentes de cada página, por exemplo: header.html/footer.html.</p>
+    <p style="margin-left: 2rem">:lipstick: |---scss - todo o conteúdo relacionado a sass ficam nessa pasta.</p>
 
-Ao realizar o comando yarn build ou alterar o código em modo de desenvolvimento, obterá uma estrutura semelhante a src.<br />
-&nbsp;:tada: |---build - nossa pasta disponível para subir para a produção, contendo todas as outras pastas necessárias e nossos páginas HTML com seus componentes incluídos.<br />
-&nbsp;&nbsp;:package: |---assets - sem mudanças.<br />
-&nbsp;&nbsp;:card_file_box: |--images - pode possuir a mesma estrutura ou as imagens estão minificadas se você usar o comando yarn imagemin após o comando yarn build.<br />
-&nbsp;&nbsp;:card_file_box: |---video - sem mudanças.<br />
-&nbsp;&nbsp;:mag: |---js - arquivos javascripts transpilados, minificados, comprimidos e com o sufixo min.<br />
-&nbsp;&nbsp;:art: |---css - arquivo css, todo o código sass é compilado para css, minificado, autoprefixado, comprimido e adota o sufixo min.<br />
+Ao realizar o comando yarn build ou alterar o código em modo de desenvolvimento, obterá uma estrutura semelhante a src. <br />
+  <p style="margin-left: 1rem">:tada: |---build - nossa pasta disponível para subir para a produção, contendo todas as outras pastas necessárias e nossos páginas HTML com seus componentes incluídos.</p>
+    <p style="margin-left: 2rem">:package: |---assets - sem mudanças.</p>
+      <p style="margin-left: 3rem">:card_file_box: |--images - pode possuir a mesma estrutura ou as imagens estão minificadas se você usar o comando yarn imagemin após o comando yarn build.</p>
+      <p style="margin-left: 3rem">:card_file_box: |---video - sem mudanças.</p>
+    <p style="margin-left: 2rem">:mag: |---js - arquivos javascripts transpilados, minificados, comprimidos e com o sufixo min.</p>
+    <p style="margin-left: 2rem">:art: |---css - arquivo css, todo o código sass é compilado para css, minificado, autoprefixado, comprimido e adota o sufixo min.</p>
