@@ -3,7 +3,7 @@
 Este é um boilerplate criado principalmente para ser utilizado no meu ambiente de trabalho, pronto para lidar com novos projetos e projetos já iniciados.
 
 ## Funcionalidades
-- [x] Minificação de arquivos _javascript, CSS e imagens;
+- [x] Minificação de arquivos javascript, CSS e imagens;
 - [x] Fileinclude HTML;
 - [x] Transpilação do código javascript (babel);
 - [x] Concatenação e autoprefixer (compatibilidade) do arquivo CSS;
