@@ -1,15 +1,10 @@
-# :card_file_box: **Boilerplate para projetos**
+# **Boilerplate para projetos** :rocket:
 
 Este é um boilerplate criado principalmente para ser utilizado no meu ambiente de trabalho, pronto para lidar com novos projetos e projetos já iniciados.
 
-<<<<<<< HEAD
-## Funcionalidades
-- [x] Minificação de arquivos javascript, CSS e imagens;
-=======
-### Funcionalidades
+## :hammer: Funcionalidades
 
-- [x] Minificação de arquivos _javascript, CSS e imagens;
->>>>>>> 3d6ab0f5b5d23fd90eeddfcc18a696fc7b27db11
+- [x] Minificação de arquivos javascript, CSS e imagens;
 - [x] Fileinclude HTML;
 - [x] Transpilação do código javascript (babel);
 - [x] Concatenação e autoprefixer (compatibilidade) do arquivo CSS;
@@ -17,7 +12,7 @@ Este é um boilerplate criado principalmente para ser utilizado no meu ambiente 
 - [x] Cachebusting, isso é, o paramêtro de arquivos importados é sempre atualizado ao buildar, sem a necessidade de ficar atualizando manualmente;
 - [x] Padronização do estilo utilizado no código por meio de lints, como prettier, eslint e editorconfig;
 
-### Comandos
+### Comandos :zap:
 
 :sparkles: yarn - nesse projeto utilizamos o yarn, para que instale as dependências utilizadas rode este comando.
 
@@ -27,7 +22,7 @@ Este é um boilerplate criado principalmente para ser utilizado no meu ambiente 
 
 :construction_worker: yarn imagemin - minifica as imagens da pasta images dentro de src.
 
-### Estrutura de pastas
+### Estrutura de pastas :card_file_box:
 
 A divisão de pastas desse boilerplate é feita da seguinte maneira: <br />
 &nbsp;&nbsp;:seedling: |---src - nossa pasta raiz de desenvolvimento, é nela onde estão todas as outras pastas com seus correspondentes conteúdos brutos.<br />
@@ -46,3 +41,15 @@ Ao realizar o comando yarn build ou alterar o código em modo de desenvolvimento
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:card_file_box: |---video - sem mudanças.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;:mag: |---js - arquivos javascripts transpilados, minificados, comprimidos e com o sufixo min.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;:art: |---css - arquivo css, todo o código sass é compilado para css, minificado, autoprefixado, comprimido e adota o sufixo min.<br />
+
+### Lista de dependências e ferramentas do projeto :page_facing_up:
+
+- Gulp: executador de tarefas, utilizado que possamos automatizar nossas tarefas e poupemos
+
+- Node.js: ambiente que execute o Gulp no lado do servidor.
+
+- npm: gerenciador de pacotes do Node.js, permite a instalação de plugins e ambientes criados com o Node.js de forma fácil e rápida.
+
+- Eslint: é uma ferramenta que analisa o código e aponta onde o código não está seguindo o padrão configurado.
+
+- Prettier: assim como o eslint a intenção é fazer o código seguir um padrão, formatando o código ao salvar.
